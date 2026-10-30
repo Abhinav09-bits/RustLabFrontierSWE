@@ -1,0 +1,32 @@
+schema_version = "1.3"
+artifacts = ["/app"]
+
+[task]
+name = "abhinav/crash-safe-segment-log"
+description = "Implement a crash-safe segmented append-only log with a fixed on-disk layout and torn-tail recovery."
+keywords = ["storage", "durability", "binary-format", "implementation"]
+
+[[task.authors]]
+name = "Abhinav Khatta"
+
+[metadata]
+difficulty = "hard"
+category = "implementation"
+expert_time_estimate_hours = 8
+tags = ["storage", "crash-safety", "write-ahead-log"]
+
+[agent]
+timeout_sec = 72000
+user = "agent"
+
+[verifier]
+timeout_sec = 600
+environment_mode = "separate"
+user = "root"
+
+[environment]
+cpus = 2
+memory_mb = 2048
+storage_mb = 10240
+network_mode = "public"
+workdir = "/app"
