@@ -1,0 +1,32 @@
+schema_version = "1.3"
+artifacts = ["/app"]
+
+[task]
+name = "abhinav/request-authorization-gate"
+description = "Implement a request authorization gate that normalizes paths and applies deny-overrides policy rules."
+keywords = ["security", "authorization", "path-normalization"]
+
+[[task.authors]]
+name = "Abhinav Khatta"
+
+[metadata]
+difficulty = "hard"
+category = "cybersecurity"
+expert_time_estimate_hours = 8
+tags = ["authorization", "policy", "path-normalization"]
+
+[agent]
+timeout_sec = 72000
+user = "agent"
+
+[verifier]
+timeout_sec = 600
+environment_mode = "separate"
+user = "root"
+
+[environment]
+cpus = 2
+memory_mb = 2048
+storage_mb = 10240
+network_mode = "public"
+workdir = "/app"
